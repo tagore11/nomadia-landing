@@ -8,7 +8,7 @@ const containerStyle = {
 };
 
 const center = {
-  lat: 36.2012, // Örnek konum: Kaş
+  lat: 36.2012, // Kaş
   lng: 29.6371,
 };
 
@@ -16,7 +16,6 @@ const MapComponent = () => {
   return (
     <LoadScript googleMapsApiKey="AIzaSyDYyuvzqrXx07kSKDZj5x1UtUx3-6fXlbs">
       <GoogleMap mapContainerStyle={containerStyle} center={center} zoom={13}>
-        {/* Örnek Marker */}
         <Marker position={center} />
       </GoogleMap>
     </LoadScript>
