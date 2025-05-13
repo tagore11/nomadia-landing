@@ -60,7 +60,7 @@ export default function NomadiaLandingPage() {
           Discover verified crypto exchangers around you. Filter by location, rating, and preferences.
         </p>
     
-        <Map />
+<Map />
       </section>
 
       {/* Why Nomadia */}
