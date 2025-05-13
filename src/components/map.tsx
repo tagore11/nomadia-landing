@@ -13,6 +13,7 @@ const center = {
 };
 
 const MapComponent = () => {
+  console.log("Map component loaded");
   return (
     <LoadScript googleMapsApiKey="AIzaSyDYyuvzqrXx07kSKDZj5x1UtUx3-6fXlbs">
       <GoogleMap mapContainerStyle={containerStyle} center={center} zoom={13}>
