@@ -1,6 +1,7 @@
 "use client";
 
-import { GoogleMap, LoadScript, Marker } from "@react-google-maps/api";
+import { GoogleMap, Marker, useLoadScript } from "@react-google-maps/api";
+import { useMemo } from "react";
 
 const containerStyle = {
   width: "100%",
@@ -13,13 +14,23 @@ const center = {
 };
 
 const MapComponent = () => {
-  console.log("Map component loaded");
+  const { isLoaded, loadError } = useLoadScript({
+    googleMapsApiKey: "AIzaSyDYyuvzqrXx07kSKDZj5x1UtUx3-6fXlbs",
+  });
+
+  const mapCenter = useMemo(() => center, []);
+
+  if (loadError) return <div>Error loading map</div>;
+  if (!isLoaded) return <div>Loading map...</div>;
+
   return (
-    <LoadScript googleMapsApiKey="AIzaSyDYyuvzqrXx07kSKDZj5x1UtUx3-6fXlbs">
-      <GoogleMap mapContainerStyle={containerStyle} center={center} zoom={13}>
-        <Marker position={center} />
-      </GoogleMap>
-    </LoadScript>
+    <GoogleMap
+      mapContainerStyle={containerStyle}
+      center={mapCenter}
+      zoom={13}
+    >
+      <Marker position={mapCenter} />
+    </GoogleMap>
   );
 };
 

@@ -1,7 +1,8 @@
 // src/app/page.tsx
-'use client';
 import dynamic from "next/dynamic";
 const Map = dynamic(() => import("@/components/Map"), { ssr: false });
+'use client';
+
 import React from "react";
 
 const Button = ({
@@ -58,7 +59,8 @@ export default function NomadiaLandingPage() {
         <p className="mb-10 text-lg max-w-2xl mx-auto">
           Discover verified crypto exchangers around you. Filter by location, rating, and preferences.
         </p>
-          <Map />
+    
+        <Map />
       </section>
 
       {/* Why Nomadia */}
