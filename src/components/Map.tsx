@@ -13,7 +13,7 @@ export default function Map() {
         fontWeight: "bold",
       }}
     >
-      Harita burada
+      Harita burada!
     </div>
   );
 }
