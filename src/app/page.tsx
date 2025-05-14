@@ -58,7 +58,7 @@ export default function NomadiaLandingPage() {
       <section className="py-20 px-6 text-center bg-blue-900 text-white">
         <h2 className="text-4xl font-bold mb-6">Join the Nomadia Network</h2>
         <p className="mb-10 text-lg max-w-2xl mx-auto">
-          Whether you're a traveler or a local crypto holder, Nomadia empowers global exchange.
+          Whether you&apos;re a traveler or a local crypto holder, Nomadia empowers global exchange.
         </p>
         <button className="bg-white text-blue-900 px-6 py-3 rounded-full font-semibold hover:bg-gray-100 transition">
           Join our Telegram
